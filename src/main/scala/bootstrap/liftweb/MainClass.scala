@@ -15,7 +15,7 @@ object  MainClass extends App with Loggable{
     logger.info("starting Lift server")
 
     val port = System.getProperty(
-      "jetty.port", Properties.envOrElse("PORT", "8080")).toInt
+      "jetty.port", Properties.envOrElse("PORT", "5432")).toInt
 
     logger.info(s"port number is $port")
 
