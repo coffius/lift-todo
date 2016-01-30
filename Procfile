@@ -1,0 +1,1 @@
+web: sh ./target/universal/stage/bin/lift-todo -Drun.mode=production

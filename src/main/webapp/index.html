@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <script src="/js/angular.js"></script>
+    <script src="/js/todo.js"></script>
+  </head>
+  <body>
+    <h2>Tasks list: </h2>
+    <div ng-controller="TaskCtrl">
+      <form ng-submit="createNewTask()">
+        <input type="text" ng-model="taskDescription" placeholder="type a new task here">
+        <input type="submit" value="Create">
+      </form>
+      <ul>
+        <li ng-repeat="task in tasks">
+          <input type="checkbox" ng-model="task.isReady" ng-change="changeReadiness(task)">
+          <span>{{task.description}}</span>
+          <a href="#" ng-click="removeTask(task)">Delete</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
